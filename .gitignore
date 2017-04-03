@@ -9,6 +9,7 @@ app/css/sass/
 static/css/
 static/js/
 npm-debug.log
+node_modules/
 
 # Mac
 .DS_Store
@@ -18,7 +19,6 @@ log/
 target/
 bin
 src/main/webapp/dist/
-front-end/node_modules/
 front-end/app/static/
 .mvn/
 data/
