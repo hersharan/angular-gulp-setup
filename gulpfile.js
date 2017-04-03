@@ -8,7 +8,7 @@ var gulp = require( 'gulp' ),
   stylish = require( 'jshint-stylish' ), // to display the jshint messages in a human readable format with line number and file name
   templateCache = require( 'gulp-angular-templatecache' ), // to cache angular.js templates
   htmlmin = require( 'gulp-htmlmin' ),
-  imagemin = require( 'gulp-imagemin' ),
+  // imagemin = require( 'gulp-imagemin' ),
   ngmin = require( 'gulp-ng-annotate' ), // to minify html templates
   sass = require( 'gulp-sass' ),
   autoprefixer = require( 'gulp-autoprefixer' );
@@ -83,7 +83,7 @@ gulp.task( 'css-dev', [ 'compile-sass' ], function() {
     cascade: false
   } ) ).pipe( gulp.dest( options.CSS_DEST ) )
 } )
-gulp.task( 'default', [ 'js-dev', 'fonts', 'imgs', 'css-dev' ], function() {
+gulp.task( 'default', [ 'js-dev', 'fonts', 'css-dev' ], function() {
   gulp.watch( options.JS_SRC, [ 'js-dev' ] );
   //gulp.watch(options.IMAGES_SRC, ['imgs']);
   //gulp.watch(options.FONTS_SRC, ['fonts']);
