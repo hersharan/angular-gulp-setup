@@ -1,0 +1,24 @@
+# STS
+.classpath
+.project
+.settings/
+
+# FrontEnd
+app/js/bin/template/
+app/css/sass/
+static/css/
+static/js/
+npm-debug.log
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+bin
+src/main/webapp/dist/
+front-end/node_modules/
+front-end/app/static/
+.mvn/
+data/
