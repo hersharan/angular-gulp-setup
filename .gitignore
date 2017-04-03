@@ -20,6 +20,5 @@ log/
 target/
 bin
 src/main/webapp/dist/
-front-end/app/static/
 .mvn/
 data/
