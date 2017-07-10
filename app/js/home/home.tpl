@@ -1,1 +1,1 @@
-<div class="test-home"> Home </div>
+<div class="test-home"> Home TPL loaded </div>
