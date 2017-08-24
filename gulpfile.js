@@ -21,7 +21,7 @@ var options = new function() {
     this.CSS_SRC = [ 'app/libs/css/**/*.css', 'app/css/**/*.css' ], // 0 index must be vendor libs for convention sake
     this.SASS_SRC = [ 'app/sass/**/*.sass', 'app/sass/**/*.scss' ],
     this.JS_SRC = [ 'app/libs/js/**/*.js', 'app/js/app.js', 'app/js/**/*.js' ], // 0 index must be vendor libs for convention sake
-    this.JS_SRC_DEV = [ 'app/libs/js/angular/**/*.js', 'app/js/app.js', 'app/js/**/*.js' ], // 0 index must be vendor libs for convention sake
+    this.JS_SRC_DEV = [ 'app/libs/js/**/*.js', 'app/js/app.js', 'app/js/**/*.js' ], // 0 index must be vendor libs for convention sake
     this.DIST_SRC = 'static', // specific to spring-starter-project. change to suit your project needs.
     //Destination
     this.PARTIALS_DEST = 'app/js/bin/template',
@@ -85,8 +85,8 @@ gulp.task( 'css-dev', [ 'compile-sass' ], function() {
 } )
 gulp.task( 'default', [ 'js-dev', 'fonts', 'css-dev' ], function() {
   gulp.watch( options.JS_SRC, [ 'js-dev' ] );
-  //gulp.watch(options.IMAGES_SRC, ['imgs']);
-  //gulp.watch(options.FONTS_SRC, ['fonts']);
+  gulp.watch(options.IMAGES_SRC, ['imgs']);
+  gulp.watch(options.FONTS_SRC, ['fonts']);
   gulp.watch( options.CSS_SRC.concat( options.SASS_SRC ), [ 'css-dev' ] );
   gulp.watch( options.PARTIALS_SRC, [ 'template-cache' ] );
 } );
